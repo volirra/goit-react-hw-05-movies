@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const HomePage = () => {
-const [movies, setMovies] = useState(null);
-const location = useLocation();
+  const [movies, setMovies] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     getMovies().then(setMovies);

@@ -8,7 +8,7 @@ const MoviesPage = () => {
   const history = useHistory();
   const location = useLocation();
   const queryUrl = new URLSearchParams(location.search).get('query');
- 
+
   useEffect(() => {
     if (findFilm === null) return;
     getMoviesQuery(findFilm).then(setFilms);
@@ -17,7 +17,7 @@ const MoviesPage = () => {
   useEffect(() => {
     if (queryUrl === null) return;
     setFindFilm(queryUrl);
-  }, []); 
+  }, []);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -27,7 +27,7 @@ const MoviesPage = () => {
       ...location,
       search: `query=${query}`,
     });
-    
+
     e.target.elements.query.value = '';
   };
   return (
@@ -55,4 +55,4 @@ const MoviesPage = () => {
   );
 };
 
-export default MoviesPage;i
+export default MoviesPage;
