@@ -2,9 +2,9 @@ import { lazy } from 'react';
 import Navigation from 'components/Navigation/Navigation';
 import { Route, Routes } from 'react-router-dom';
 
-const HomePage = lazy(() => import('components/HomePage/HomePage.jsx'));
-const MoviesPage = lazy(() => import('components/MoviesPage/MoviesPage.jsx'));
-const MovieDetailsPage = lazy(() => import('components/MovieDetailsPage/MovieDetailsPage.jsx')
+const HomePage = lazy(() => import('pages/HomePage/HomePage.jsx'));
+const MoviesPage = lazy(() => import('pages/MoviesPage/MoviesPage.jsx'));
+const MovieDetailsPage = lazy(() =>  import('pages/MovieDetailsPage/MovieDetailsPage.jsx')
 );
 const NotFoundView = lazy(() =>
   import('components/NotFoundView/NotFoundView.jsx')
